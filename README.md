@@ -2,7 +2,7 @@
 
 Beliefs are a flexible data structure representing perceived info and beliefs on the world.
 
-```c#
+```csharp
 // Inputs, updated by external sources
 public Belief<Vector3> LastKnownPlayerPosition { get; } = new();
 
@@ -12,7 +12,7 @@ public Belief<Vector3> TargetPosition { get; }
 
 The brain is the belief processor of an agent.
 
-```c#
+```csharp
 // Initialize an AI with a semi-random personality and a fast reaction time (100ms)
 var brain = new Brain(body, personality: .5f)
 {
@@ -22,7 +22,7 @@ var brain = new Brain(body, personality: .5f)
 
 A brain must define need beliefs, which are beliefs that numerically estimate a need's intensity, based on input beliefs. They also require a motive, that can be survival, love, or achievement, and acts as a weight on the need. These motives are based on Maslow's pyramid of needs.
 
-```c#
+```csharp
 // The AI needs to kiss the player
 var kissPlayer = brain.Need(
     new(
@@ -41,7 +41,7 @@ var kissPlayer = brain.Need(
 
 Beliefs communicate through signals, that ensure output beliefs are updated when input beliefs change.
 
-```c#
+```csharp
 TargetPosition = new(
     signal =>
         // If the AI wants to kiss the player, should move toward the player
