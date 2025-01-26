@@ -1,4 +1,12 @@
-# How to use
+# Act by belief
+
+A decision tree AI workflow for natural thought inspired by the [Maslow hierarchy of needs](https://wikipedia.org/wiki/Maslow%27s_hierarchy_of_needs).
+
+## How to install
+
+Clone the repository as a git submodule and use it. If not using git, just download the code.
+
+## How to use
 
 Beliefs are a flexible data structure representing perceived info and beliefs on the world.
 
